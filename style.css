@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  background-color: rgb(41, 187, 109);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 20px;
+  padding: 60px;
+  height: 30vw;
+  width: 30vw;
+}
+
+.quote {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  width: 80%;
+  position: relative;
+}
+
+.quote::before {
+  content: '"';
+  position: absolute;
+  top: -30px;
+  left: -10px;
+  font-size: 5rem;
+  color: rgba(158, 158, 158, 0.267);
+}
+.quote-ref {
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+.author {
+  font-weight: 500;
+}
+
+.btn-next {
+  background-color: rgb(41, 187, 109);
+  border: 0;
+  border-radius: 20px;
+  padding: 10px;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.btn-next:focus {
+  outline: none;
+}
+.btn-next svg {
+  fill: white;
+}

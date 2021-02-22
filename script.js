@@ -1,6 +1,7 @@
 const quote = document.getElementById('quote');
 const author = document.getElementById('author');
 const genQuoteBtn = document.getElementById('generateQuote');
+let prevIndex = null;
 let quotes = [];
 
 async function fetchQuotes() {
@@ -13,7 +14,11 @@ async function fetchQuotes() {
 fetchQuotes();
 
 function generateQuote() {
-  const randomQuoteIndex = Math.floor(Math.random(quotes.length) * 10);
+  let randomQuoteIndex = Math.floor(Math.random() * quotes.length);
+  while (randomQuoteIndex === prevIndex) {
+    randomQuoteIndex = Math.floor(Math.random() * quotes.length);
+  }
+  prevIndex = randomQuoteIndex;
   const quoteSelected = quotes[randomQuoteIndex];
   quote.innerText = quoteSelected.quote;
   author.innerText = quoteSelected.author;
